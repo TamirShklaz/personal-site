@@ -2,6 +2,10 @@ import profileImage from "../public/profile.jpeg";
 import Project from "./components/Project.tsx";
 import strive_picture from '../public/strive_picture.jpeg'
 import insupply_picture from '../public/insupply_picture.png'
+import strive_blog_post from '../public/strive_blog_post.webp'
+import yc_blog from '../public/yc_blog.webp'
+
+import BlogListItem from "./components/BlogListItem.tsx";
 
 export default function Home() {
     return (
@@ -37,7 +41,21 @@ export default function Home() {
 
                 </div>
 
-                <h1 className={"mt-8"}>Featured blog posts</h1>
+                <h1 className={"mt-16"}>Featured blog posts</h1>
+                <div className={"flex-col mt-4"}>
+                    <BlogListItem title={"We Raised $1.3M to Transform How Kids Learn to Code"}
+                                  tags={["Startups", "Education", "Tech"]}
+                                  date={"Feb 22 2023"}
+                                  description={"Let me be the umpteenth person to remind you that coding is the most crucial skill of the 21st century. By now, you might feel like this point is being overstated. Career counselors, teachers, and the news have been feeding us this message ad nauseam for over a decade. However, when you look at the massive demand for coding skills across the globe — and the severe shortage of them — it’s clear that the problem still needs solving."}
+                                  image={strive_blog_post} url={""} minsToRead={7}/>
+                    <div className={"border-[1px] border-gray-300 w-full my-8"}></div>
+
+                    <BlogListItem title={"Getting into YC after being rejected 4 times"}
+                                  tags={["Startups"]}
+                                  date={"Oct 15, 2021"}
+                                  description={"Four times! I got rejected by YC four times before finally being accepted into the YCS21 batch."}
+                                  image={yc_blog} url={""} minsToRead={2}/>
+                </div>
 
             </div>
         </div>
