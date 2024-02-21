@@ -13,7 +13,7 @@ const Layout = () => {
                 {/* Outlet will render the matched route's component here */}
                 <Outlet/>
             </main>
-            <Footer/>
+            <Footer className={"sticky z-30 top-0 h-screen flex flex-col justify-end p-4"}/>
         </div>
     );
 };
