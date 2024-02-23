@@ -29,7 +29,7 @@ export default function BlogListItem({title, description, image, url, minsToRead
                         <p className={"text-gray-500 text-sm"}>{minsToRead} min read</p>
                     </div>
                 </div>
-                <img className={"w-[126px] h-[126px] object-cover"} src={image} alt={title}/>
+                <img className={"w-[126px] h-[126px] object-cover rounded-xl"} src={image} alt={title}/>
             </div>
         </div>
     )

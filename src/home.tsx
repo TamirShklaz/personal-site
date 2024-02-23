@@ -6,6 +6,7 @@ import strive_blog_post from '../public/strive_blog_post.webp'
 import yc_blog from '../public/yc_blog.webp'
 
 import BlogListItem from "./components/BlogListItem.tsx";
+import Button from "./components/Button.tsx";
 
 export default function Home() {
     return (
@@ -38,6 +39,7 @@ export default function Home() {
                              primaryCTAText={"Watch TV Interview"}
                              primaryCTAUrl={"https://www.linkedin.com/posts/tamir-shklaz_youth-youthday-ppe-activity-6678678322618085377-vTjT?utm_source=share&utm_medium=member_desktop"}
                     />
+                    <Button className={"w-fit"}>View projects</Button>
 
                 </div>
 
@@ -55,6 +57,9 @@ export default function Home() {
                                   date={"Oct 15, 2021"}
                                   description={"Four times! I got rejected by YC four times before finally being accepted into the YCS21 batch."}
                                   image={yc_blog} url={""} minsToRead={2}/>
+
+                    <Button className={"mt-8"} onClick={() => window.open("https://tamirshklaz.medium.com/", "_blank")}>Read
+                        Blog</Button>
                 </div>
 
             </div>

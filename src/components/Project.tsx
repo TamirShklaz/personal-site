@@ -33,10 +33,11 @@ export default function Project({
                     {subtitle}
                 </p>
 
-                <div className={"mt-4"}>
+                <div className={"mt-4 flex flex-col"}>
                     <Button onClick={() => window.open(primaryCTAUrl, "_blank")}>{primaryCTAText}</Button>
                     {secondaryCTAUrl && <Button onClick={() => window.open(secondaryCTAUrl, "_blank")}
-                                                secondary>{secondaryCTAText}</Button>}
+                                                secondary>{secondaryCTAText}</Button>
+                    }
                 </div>
 
 

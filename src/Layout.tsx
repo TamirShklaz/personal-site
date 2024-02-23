@@ -7,7 +7,7 @@ import Footer from "./components/Footer.tsx";
 const Layout = () => {
     return (
         <div className={"flex flex-row min-h-screen max-w-screen-xl justify-center p-0"}>
-            <Navbar className={"sticky top-[120px] z-30 h-screen"}/>
+            <Navbar className={"sticky z-30 h-screen top-0"}/>
             <main className={"border-l-2 border-r-2 border-gray-300 flex-grow-1 w-9/12"}>
 
                 {/* Outlet will render the matched route's component here */}
