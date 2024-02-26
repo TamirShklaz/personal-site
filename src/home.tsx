@@ -27,7 +27,9 @@ export default function Home() {
                 <h1 className={"my-8"}>Featured projects</h1>
                 <div className={"grid grid-cols-2 gap-8"}>
                     <Project title={"Strive (YC S21)"}
-                             subtitle={"I was the Founder & CTO of Strive, an online coding school for kids that empowered more than 1000 students to find a passion for coding and pioneered a world first approach of teaching math through code."}
+                             subtitle={"I was the Founder & CTO of Strive, " +
+                                 "an online coding school for kids that empowered more than 1000 students to find a" +
+                                 " passion for coding, we raised $1.3M USD to pioneer a world first approach of teaching math through code."}
                              image={strive_picture}
                              primaryCTAText={"Visit Website"}
                              primaryCTAUrl={"https://www.strivemath.com/"}
