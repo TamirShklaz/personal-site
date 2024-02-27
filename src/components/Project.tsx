@@ -23,15 +23,18 @@ export default function Project({
                                 }: ProjectProps) {
     return (
         <div
-            className={"border-[1px] border-gray-300 drop-shadow-xl rounded-2xl hover:drop-shadow-2xl hover:cursor-pointer hover:bg-gray-100 " + className}>
+            className={"flex flex-col h-full border-[1px] border-gray-300 drop-shadow-xl rounded-2xl hover:drop-shadow-2xl hover:cursor-pointer hover:bg-gray-100 " + className}>
             <img src={image} className={"rounded-t-2xl min-h-[250px] object-cover"}/>
-            <div className={"p-4"}>
-                <h3 className={"text-2xl"}>
-                    {title}
-                </h3>
-                <p className={"text-gray-600 mt-2"}>
-                    {description}
-                </p>
+            <div className={"p-4 flex flex-col justify-between flex-grow"}>
+                <div>
+                    <h3 className={"text-2xl"}>
+                        {title}
+                    </h3>
+                    <p className={"text-gray-600 mt-2"}>
+                        {description}
+                    </p>
+                </div>
+
 
                 <div className={"mt-4 flex flex-col"}>
                     <Button onClick={() => window.open(primaryCTAUrl, "_blank")}>{primaryCTAText}</Button>

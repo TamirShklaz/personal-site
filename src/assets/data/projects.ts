@@ -7,7 +7,7 @@ import quillo from "../../../public/projects/quillo_project_cover.jpg"
 
 export const projects: ProjectProps[] = [
     {
-        title: "Strive YCS21",
+        title: "Strive (YC S21)",
         description: "Founder & CTO | An online coding school for kids that empowered more than 1000 students to find a passion for coding; we raised $1.3M USD and built a 20+ person team to pioneer a world-first approach to teaching math through code.",
         image: strive,
         primaryCTAText: "Visit Website",
@@ -28,10 +28,10 @@ export const projects: ProjectProps[] = [
         title: "Coronapp",
         description: "A centralised repository for relevant and accurate information regarding the COVID-19 virus in South Africa: during the pandemic's peak, more than 1M South Africans used the platform daily. ",
         image: coronapp,
-        primaryCTAText: "Listen to Radio Interview",
-        primaryCTAUrl: "https://omny.fm/shows/afternoons-with-pippa-hudson/uct-alumni-build-coronapp?t=1m21s",
-        secondaryCTAText: "Read Article",
-        secondaryCTAUrl: "https://www.news.uct.ac.za/article/-2020-03-20-uct-alumni-build-coronapp-platform"
+        secondaryCTAText: "Listen to Radio Interview",
+        secondaryCTAUrl: "https://omny.fm/shows/afternoons-with-pippa-hudson/uct-alumni-build-coronapp?t=1m21s",
+        primaryCTAText: "Visit Website",
+        primaryCTAUrl: "https://www.coronapp.co.za/"
     },
     {
         title: "Quillo",

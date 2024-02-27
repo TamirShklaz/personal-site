@@ -1,49 +1,54 @@
 import profileImage from "../public/profile.jpeg";
 import Project from "./components/Project.tsx";
-import strive_picture from '../public/projects/strive_project_cover.jpeg'
-import insupply_picture from '../public/projects/insupply_project_cover.png'
 import strive_blog_post from '../public/strive_blog_post.webp'
 import yc_blog from '../public/yc_blog.webp'
 
 import BlogListItem from "./components/BlogListItem.tsx";
 import Button from "./components/Button.tsx";
+import {projects} from "./assets/data/projects.ts";
+import {useLocation, useNavigate} from "react-router-dom";
+import {useEffect} from "react";
 
 export default function Home() {
+    const navigate = useNavigate()
+    const {pathname} = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
     return (
-        <div className={"flex flex-col justify-start text-left"}>
-            <div className={"px-24 py-4 mt-[120px] flex"}>
+        <div className={"flex flex-col justify-start text-left max-w-full"}>
+            <div className={"px-4 lg:px-24 py-4 lg:mt-[120px] flex flex-col lg:flex-row"}>
                 <div className={"mr-8"}>
-                    <h1 className={"font-semibold size text-4xl"}>Hi, I'm Tamir 👋</h1>
+                    <h1 className={"font-semibold size text-3xl lg:text-4xl"}>Hi, I'm Tamir 👋</h1>
                     <p className={"mt-4 text-gray-600"}>South African born 3x startup founder, in love with yoga, rock
                         climbing and anything that gets me
                         out of my comfort zone</p>
                 </div>
-                <img className={"rounded-lg w-[256px] h-[312px] object-cover"} src={profileImage}/>
+                <img
+                    className={"mt-4 hidden lg:block rounded-lg w-[128px] h-[156px] lg:w-[256px] lg:h-[312px] object-cover"}
+                    src={profileImage}/>
             </div>
 
 
             <div className={"border-[1px] border-gray-300 w-full"}></div>
-            <div className={"py-4 px-24"}>
+            <div className={"py-4 px-4 lg:px-24"}>
                 <h1 className={"my-8"}>Featured projects</h1>
-                <div className={"grid grid-cols-2 gap-8"}>
-                    <Project title={"Strive (YC S21)"}
-                             description={"I was the Founder & CTO of Strive, " +
-                                 "an online coding school for kids that empowered more than 1000 students to find a" +
-                                 " passion for coding, we raised $1.3M USD to pioneer a world first approach of teaching math through code."}
-                             image={strive_picture}
-                             primaryCTAText={"Visit Website"}
-                             primaryCTAUrl={"https://www.strivemath.com/"}
-                             secondaryCTAUrl={"https://techcrunch.com/2023/02/20/strive/"}
-                             secondaryCTAText={"Read Tech Crunch Article"}/>
-                    <Project title={"Insupply"}
-                             description={"I was the Founder & CEO/CTO of Insupply, A marketplace for trusted buyers and supplies of PPE equipment during COVID-19. We worked with the South African presidency and listed 50M+ items of PPE, and received requests for more than 100M items of PPE ($1Bn in value) in < 6 months "}
-                             image={insupply_picture}
-                             primaryCTAText={"Watch TV Interview"}
-                             primaryCTAUrl={"https://www.linkedin.com/posts/tamir-shklaz_youth-youthday-ppe-activity-6678678322618085377-vTjT?utm_source=share&utm_medium=member_desktop"}
-                    />
-                    <Button className={"w-fit"}>View projects</Button>
+
+                <div className={"grid lg:grid-cols-2 gap-8 mt-8"}>
+                    {projects.slice(0, 2).map(project => <Project title={project.title}
+                                                                  description={project.description}
+                                                                  image={project.image}
+                                                                  primaryCTAText={project.primaryCTAText}
+                                                                  primaryCTAUrl={project.primaryCTAUrl}
+                                                                  secondaryCTAUrl={project.secondaryCTAUrl}
+                                                                  secondaryCTAText={project.secondaryCTAText}
+                    />)}
 
                 </div>
+
+
+                <Button onClick={() => navigate("/projects", {preventScrollReset: false})} className={"w-fit mt-8"}>View
+                    projects</Button>
 
                 <h1 className={"mt-16"}>Featured blog posts</h1>
                 <div className={"flex-col mt-4"}>

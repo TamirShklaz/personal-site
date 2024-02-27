@@ -7,7 +7,7 @@ export type PageHeaderProps = {
 export default function PageHeader({title, subtitle, className}: PageHeaderProps) {
     return (
         <div className={"flex flex-col justify-start text-left" + " " + className}>
-            <div className={"px-24 py-4 mt-[120px] flex"}>
+            <div className={"px-4 lg:px-24 py-4 lg:mt-[120px] flex"}>
                 <div className={"mr-8"}>
                     <h1 className={"font-semibold size text-4xl"}>{title}</h1>
                     <p className={"mt-4 text-gray-600"}>{subtitle} </p>

@@ -8,7 +8,7 @@ export type FooterProps = {
 
 }
 export default function Footer({className}: FooterProps) {
-    return <footer className={className}>
+    return <footer className={className + " " + "flex flex-col bg-gray-50 lg:bg-white"}>
         <div className={"flex flex-row mb-4"}>
             <a href={"https://www.linkedin.com/in/tamir-shklaz/"} target={"_blank"}>
                 <IoLogoLinkedin
