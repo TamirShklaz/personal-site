@@ -1,7 +1,7 @@
 import profileImage from "../public/profile.jpeg";
 import Project from "./components/Project.tsx";
-import strive_picture from '../public/strive_picture.jpeg'
-import insupply_picture from '../public/insupply_picture.png'
+import strive_picture from '../public/projects/strive_project_cover.jpeg'
+import insupply_picture from '../public/projects/insupply_project_cover.png'
 import strive_blog_post from '../public/strive_blog_post.webp'
 import yc_blog from '../public/yc_blog.webp'
 
@@ -27,7 +27,7 @@ export default function Home() {
                 <h1 className={"my-8"}>Featured projects</h1>
                 <div className={"grid grid-cols-2 gap-8"}>
                     <Project title={"Strive (YC S21)"}
-                             subtitle={"I was the Founder & CTO of Strive, " +
+                             description={"I was the Founder & CTO of Strive, " +
                                  "an online coding school for kids that empowered more than 1000 students to find a" +
                                  " passion for coding, we raised $1.3M USD to pioneer a world first approach of teaching math through code."}
                              image={strive_picture}
@@ -36,7 +36,7 @@ export default function Home() {
                              secondaryCTAUrl={"https://techcrunch.com/2023/02/20/strive/"}
                              secondaryCTAText={"Read Tech Crunch Article"}/>
                     <Project title={"Insupply"}
-                             subtitle={"I was the Founder & CEO/CTO of Insupply, A marketplace for trusted buyers and supplies of PPE equipment during COVID-19. We worked with the South African presidency and listed 50M+ items of PPE, and received requests for more than 100M items of PPE ($1Bn in value) in < 6 months "}
+                             description={"I was the Founder & CEO/CTO of Insupply, A marketplace for trusted buyers and supplies of PPE equipment during COVID-19. We worked with the South African presidency and listed 50M+ items of PPE, and received requests for more than 100M items of PPE ($1Bn in value) in < 6 months "}
                              image={insupply_picture}
                              primaryCTAText={"Watch TV Interview"}
                              primaryCTAUrl={"https://www.linkedin.com/posts/tamir-shklaz_youth-youthday-ppe-activity-6678678322618085377-vTjT?utm_source=share&utm_medium=member_desktop"}

@@ -3,7 +3,7 @@ import Button from "./Button.tsx";
 export type ProjectProps = {
     className?: string;
     title: string;
-    subtitle: string;
+    description: string;
     image: string;
     primaryCTAText: string;
     secondaryCTAText?: string;
@@ -14,7 +14,7 @@ export type ProjectProps = {
 export default function Project({
                                     className,
                                     title,
-                                    subtitle,
+                                    description,
                                     image,
                                     primaryCTAText,
                                     secondaryCTAText,
@@ -30,7 +30,7 @@ export default function Project({
                     {title}
                 </h3>
                 <p className={"text-gray-600 mt-2"}>
-                    {subtitle}
+                    {description}
                 </p>
 
                 <div className={"mt-4 flex flex-col"}>

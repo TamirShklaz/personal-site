@@ -1,14 +1,25 @@
+import PageHeader from "../components/PageHeader.tsx";
+import {projects} from "../assets/data/projects.ts";
+import Project from "../components/Project.tsx";
+
+
 export default function Projects() {
     return (
         <div className={"flex flex-col justify-start text-left"}>
-            <div className={"px-24 py-4 mt-[120px] flex"}>
-                <div className={"mr-8"}>
-                    <h1 className={"font-semibold size text-4xl"}>Projects</h1>
-                    <p className={"mt-4 text-gray-600"}>A collection of the different startups, apps, websites and other
-                        things I've built </p>
-                </div>
+            <PageHeader title={"Projects"}
+                        subtitle={"A collection of the different startups, apps, websites and other\n" +
+                            "                        things I've built"}/>
+
+            <div className={"grid grid-cols-2 gap-8 px-24 mt-20"}>
+                {projects.map(project => <Project title={project.title}
+                                                  description={project.description} image={project.image}
+                                                  primaryCTAText={project.primaryCTAText}
+                                                  primaryCTAUrl={project.primaryCTAUrl}
+                                                  secondaryCTAUrl={project.secondaryCTAUrl}
+                                                  secondaryCTAText={project.secondaryCTAText}
+                />)}
+
             </div>
-            <div className={"border-[1px] border-gray-300 w-full"}></div>
 
         </div>
     )

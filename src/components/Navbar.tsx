@@ -1,6 +1,8 @@
 export type NavbarProps = {
     className?: string
 }
+
+export const BASE_URL = "personal-site"
 export default function Navbar({className}: NavbarProps) {
     return (
         <div className={className}>
@@ -8,16 +10,15 @@ export default function Navbar({className}: NavbarProps) {
                 <nav>
                     <a href="/"
                        className="block py-2.5  rounded transition duration-200 hover:text-slate-900">Home</a>
-                    <a href="/projects"
-                       className="block py-2.5  rounded transition duration-200 hover:text-slate-900">Projects</a>
-
+                    <a href={`https://tamirshklaz.medium.com/`} target={"_blank"}
+                       className="block py-2.5  rounded transition duration-200 hover:text-slate-900">Blog</a>
                     <a href="/personal-site/about"
                        className="block py-2.5  rounded transition duration-200 hover:text-slate-900">About</a>
-                    <a href="#"
-                       className="block py-2.5  rounded transition duration-200 hover:text-slate-9000">Contact</a>
-                    <a href="/personal-site/creative-coding"
-                       className="block py-2.5  rounded transition duration-200 hover:text-slate-900">Creative
-                        Coding</a>
+                    <a href={`/${BASE_URL}/projects`}
+                       className="block py-2.5  rounded transition duration-200 hover:text-slate-900">Projects</a>
+                    {/*<a href="/personal-site/creative-coding"*/}
+                    {/*   className="block py-2.5  rounded transition duration-200 hover:text-slate-900">Creative*/}
+                    {/*    Coding</a>*/}
                 </nav>
             </div>
         </div>
