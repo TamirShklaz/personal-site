@@ -20,9 +20,29 @@ export default function Home() {
             <div className={"px-4 lg:px-24 py-4 lg:mt-[120px] flex flex-col lg:flex-row"}>
                 <div className={"mr-8"}>
                     <h1 className={"font-semibold size text-3xl lg:text-4xl"}>Hi, I'm Tamir 👋</h1>
-                    <p className={"mt-4 text-gray-600"}>South African born 3x startup founder, in love with yoga, rock
-                        climbing and anything that gets me
-                        out of my comfort zone</p>
+                    <p className={"mt-4 text-gray-600"}>South African-born 3x startup founder, I’m obsessed with
+                        creating products or companies that enable others to lead meaningful lives. <br/> <br/>
+                        My past
+                        projects have focused on:
+
+                        <ul className={"mt-1 list-disc"}>
+                            <li>
+                                <a href={"https://techcrunch.com/2023/02/20/strive/"} target={"_blank"}
+                                   className={"font-medium underline"}>Teaching
+                                    kids vital 21st-century skills</a>
+                            </li>
+                            <li>
+                                <a href={"https://techcrunch.com/2023/02/20/strive/"} target={"_blank"}
+                                   className={"font-medium underline"}>Getting medical equipment to frontline
+                                    workers</a>
+                            </li>
+                            <li>
+                                <a href={"https://techcrunch.com/2023/02/20/strive/"} target={"_blank"}
+                                   className={"font-medium underline"}> Making education more affordable and
+                                    accessible</a>
+                            </li>
+                        </ul>
+                    </p>
                 </div>
                 <img
                     className={"mt-4 hidden lg:block rounded-lg w-[128px] h-[156px] lg:w-[256px] lg:h-[312px] object-cover"}
@@ -65,7 +85,8 @@ export default function Home() {
                                   description={"Four times! I got rejected by YC four times before finally being accepted into the YCS21 batch."}
                                   image={yc_blog} url={""} minsToRead={2}/>
 
-                    <Button className={"mt-8"} onClick={() => window.open("https://tamirshklaz.medium.com/", "_blank")}>Read
+                    <Button className={"mt-8"}
+                            onClick={() => window.open("https://tamirshklaz.medium.com/", "_blank")}>Read
                         Blog</Button>
                 </div>
 

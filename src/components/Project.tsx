@@ -23,6 +23,7 @@ export default function Project({
                                 }: ProjectProps) {
     return (
         <div
+            onClick={() => window.open(primaryCTAUrl, "_blank")}
             className={"flex flex-col h-full border-[1px] border-gray-300 drop-shadow-xl rounded-2xl hover:drop-shadow-2xl hover:cursor-pointer hover:bg-gray-100 " + className}>
             <img src={image} className={"rounded-t-2xl min-h-[250px] object-cover"}/>
             <div className={"p-4 flex flex-col justify-between flex-grow"}>

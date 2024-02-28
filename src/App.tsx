@@ -1,9 +1,9 @@
 import './App.css'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "./home.tsx";
-import About from "./about.tsx";
+import About from "./pages/About.tsx";
 import Layout from "./Layout.tsx";
-import Projects from "./pages/projects.tsx";
+import Projects from "./pages/Projects.tsx";
 import CreativeCoding from "./pages/CreativeCoding.tsx";
 
 function App() {
