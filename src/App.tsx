@@ -11,7 +11,7 @@ import CreativeCoding from "./pages/CreativeCoding.tsx";
 function App() {
 
     return (
-        <BrowserRouter basename={"/personal-site/"}>
+        <BrowserRouter basename={"/"}>
             <Helmet>
                 <title>Tamir Shklaz</title>
                 <meta name={"description"}

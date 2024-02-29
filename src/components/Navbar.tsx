@@ -4,7 +4,7 @@ export type NavbarProps = {
     className?: string
 }
 
-export const BASE_URL = "personal-site"
+export const BASE_URL = ""
 export default function Navbar({className}: NavbarProps) {
 
     const [isNavOpen, setIsNavOpen] = useState(false)
@@ -33,9 +33,9 @@ export default function Navbar({className}: NavbarProps) {
                        className="block py-2.5  rounded transition duration-200 hover:text-slate-900">Home</a>
                     <a href={`https://tamirshklaz.medium.com/`} target={"_blank"}
                        className="block py-2.5  rounded transition duration-200 hover:text-slate-900">Blog</a>
-                    <a href="/personal-site/about"
+                    <a href="/about"
                        className="block py-2.5  rounded transition duration-200 hover:text-slate-900">About</a>
-                    <a href={`/${BASE_URL}/projects`}
+                    <a href="/projects"
                        className="block py-2.5  rounded transition duration-200 hover:text-slate-900">Projects</a>
                 </div>
             </div>
