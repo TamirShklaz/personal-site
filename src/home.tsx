@@ -25,7 +25,7 @@ export default function Home() {
                         My past
                         projects have focused on:
 
-                        <ul className={"mt-1 list-disc"}>
+                        <ul className={"mt-2 list-disc ml-4"}>
                             <li>
                                 <a href={"https://techcrunch.com/2023/02/20/strive/"} target={"_blank"}
                                    className={"font-medium underline"}>Teaching
