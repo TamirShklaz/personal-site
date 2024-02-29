@@ -4,12 +4,19 @@ import Home from "./home.tsx";
 import About from "./pages/About.tsx";
 import Layout from "./Layout.tsx";
 import Projects from "./pages/Projects.tsx";
+import {Helmet} from 'react-helmet';
+
 import CreativeCoding from "./pages/CreativeCoding.tsx";
 
 function App() {
 
     return (
         <BrowserRouter basename={"/personal-site/"}>
+            <Helmet>
+                <title>Tamir Shklaz</title>
+                <meta name={"description"}
+                      content={"My personal website showcasing my projects, blog and interests."}></meta>
+            </Helmet>
             <Routes>
                 <Route path={"/"} element={<Layout/>}>
                     <Route index element={<Home/>}/>
