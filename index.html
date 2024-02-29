@@ -1,23 +1,25 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-<!--    <link rel="icon" type="image/svg+xml" href="/vite.svg" />-->
-    <link rel="icon" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <script>
-      (() => {
+<head>
+    <meta charset="UTF-8"/>
+    <!--    <link rel="icon" type="image/svg+xml" href="/vite.svg" />-->
+    <link rel="icon" href="/favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tamir Shklaz</title>
+    <meta name="description"
+          content="My personal website showcasing my projects, blog and interests."/>
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="/src/main.tsx"></script>
+<script>
+    (() => {
         const redirect = sessionStorage.redirect;
         delete sessionStorage.redirect;
         if (redirect && redirect !== location.href) {
-          history.replaceState(null, null, redirect);
+            history.replaceState(null, null, redirect);
         }
-      })();
-    </script>
-  </body>
+    })();
+</script>
+</body>
 </html>
